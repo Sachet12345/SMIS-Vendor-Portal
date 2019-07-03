@@ -6,11 +6,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Items
 
 def login(request):
-    count=1
     return render(request, 'vendor_portal/login.html') 
 
 def logout(request):
-    count=0
     return render(request, "vendor_portal/login.html")
 
 
@@ -34,7 +32,8 @@ def portal(request):
 
 def add(request):
     if request.method == 'POST':
-        if request.POST.get('catNo') and request.POST.get('itemName'):
+        if request.POST.get('catNo') and request.POST.get('itemName') and request.POST.get('price') and request.POST.get('quantity') and request.POST.get('description'):
+            
             item=Items()
             item.catNo= request.POST.get('catNo')
             item.itemName= request.POST.get('itemName')
@@ -45,5 +44,8 @@ def add(request):
             item.save()
                 
             return render(request, 'vendor_portal/portal.html')  
+        else:
+            message='Please fill all the details.'
+            return render(request, "vendor_portal/portal.html",{"messg":message})       
     
     return render(request,'vendor_portal/portal.html')
