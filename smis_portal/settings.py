@@ -23,9 +23,9 @@ PROJECT_DIR = os.path.dirname(__file__)
 SECRET_KEY = 'wsp5_b*&t^&h3n@phr9+re*c3%+kexirj(z83s9=9$2aj)14ga'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition

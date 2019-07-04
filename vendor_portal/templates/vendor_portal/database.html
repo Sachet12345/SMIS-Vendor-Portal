@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Database</title>
+<style>
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background:#3498db;
+  margin: 0 auto 0 auto;  
+  width:100%; 
+  text-align:center;
+  margin: 20px 0px 20px 0px;   
+}
+
+p{
+  font-size:12px;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+h1{
+  font-size:1.4em;
+  color: white;
+}
+
+.box{
+  background:white;
+  width:300px;
+  border-radius:6px;
+  margin: 0 auto 0 auto;
+  padding:0px 0px 70px 0px;
+  border: #2980b9 4px solid; 
+  
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  background: white;
+  width : 80%;
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+th{
+  padding: 15px;
+  text-align: middle;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-weight: bold;	
+}
+
+tr:hover {background-color: #ADD8E6;}
+
+.btn{
+  background:#2ecc71;
+  width:267px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:800px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+.btn:hover{
+  background:#2CC06B; 
+}
+</style>
+</head>
+<body>
+
+
+
+<h1>CAT Database</h1>
+<div>
+<table border="1" width="600" rules="rows">
+<tr class="special">
+<th>Cat. No.</th>
+<th>Item Name</th>
+<th>Price/Item</th>
+<th>Quantity</th>
+<th>Description</th>
+<th>Vendor Name</th>
+</tr>
+<tr>
+
+</tr>
+{% for item in items %}
+<tr>
+<td>{{ item.catNo }}</td>
+<td>{{ item.itemName }}</td>
+<td>{{ item.price }}</td>
+<td>{{ item.quantity }}</td>
+<td>{{ item.description }}</td>
+<td>{{ item.vendorName }}</td>
+</tr>
+{% endfor %}
+
+</table>
+<button class="btn" onclick="location.href='{% url 'login' %}'">Dashboard</button>
+</div>
+</body>
+</html>

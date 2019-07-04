@@ -49,3 +49,9 @@ def add(request):
             return render(request, "vendor_portal/portal.html",{"messg":message})       
     
     return render(request,'vendor_portal/portal.html')
+
+def database(request):
+    items=Items.objects.all()
+    print(items)
+    context={'items':items}
+    return render(request,'vendor_portal/database.html', context)
