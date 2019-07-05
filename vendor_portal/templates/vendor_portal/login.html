@@ -105,8 +105,8 @@ h1{
   {% csrf_token %}
   <div class="box">
     <h1>Dashboard</h1>
-<input type="email" name="email" placeholder="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email">
-<input type="password" placeholder="password" name="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="email">
+<input type="email" name="email"  placeholder="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" autocomplete="off" />
+<input type="password" autocomplete="off" placeholder="password" name="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="email" autocomplete="off" />
 <input type="submit" value="Sign In" class="btn">
 </div>
 </form>

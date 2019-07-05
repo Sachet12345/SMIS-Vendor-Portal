@@ -139,15 +139,16 @@ h1{
 	
 	<h1>SMIS Vendor Portal</h1>
 	
-	<input type ="text" class="email3" name="catNo" placeholder="Cat. No.">
+	<input type ="text" class="email3" name="catNo" placeholder="Cat. No." autocomplete="off" />
 	
-	<input type="text" class="email2" name="itemName" placeholder="Item Name"><br><br>
+	<input type="text" class="email2" name="itemName" placeholder="Item Name" autocomplete="off" /><br><br>
 	
-	<input type="text" class="email2" name="price" placeholder="Price/Item">
+	<input type="text" class="email2" name="price" placeholder="Price/Item" autocomplete="off" />
 	
-	<input type="text" class="email3" name="quantity" placeholder="Quantity"><br><br>
+	<input type="text" class="email3" name="quantity" placeholder="Quantity" autocomplete="off" /><br><br>
 	
-	<input type="text" class="email4" name="description" placeholder="Description"><br><br>
+	<input type="text" class="email4" name="description" placeholder="Description" autocomplete="off" /><br><br>
+
 	<input type="submit" class="btn" value="Add"><br><br>
 </form>
   <button class="button" onclick="location.href='{% url 'logout' %}'">Log Out</button>

@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
 from .models import Items
 
 def login(request):
@@ -10,7 +9,6 @@ def login(request):
 
 def logout(request):
     return render(request, "vendor_portal/login.html")
-
 
 def portal(request):
     if request.method == 'POST':
